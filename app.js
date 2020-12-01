@@ -55,14 +55,12 @@ d3.csv("data.csv").then(function (Data) {
     
     chartGroup.selectAll("circle")
         .data(Data)
-        .enter()
+        .endter()
         .append("circle")
         .attr("cx", d => xScale(d.poverty))
         .attr("cy", d => yScale(d.healthcare))
-        .attr("r", 5)
-        .attr("fill", "blue")
-        .attr("opacity", ".6");
+        .attr("r", 1.5)
+        .attr("fill", "orange")
+        .attr("opacity", ".9");
 
-}).catch(function(error) {
-    console.log(error);
 });
